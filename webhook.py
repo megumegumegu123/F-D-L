@@ -31,97 +31,97 @@ def topLogin(data: list) -> None:
         "content": None,
         "embeds": [
             {
-                "title": "FGO登录系统 - " + main.fate_region,
+                "title": "FGO Region - " + main.fate_region,
                 "description": f"登录成功。列出角色信息.\n\n{messageBonus}",
                 "color": 563455,
                 "fields": [
                     {
-                        "name": "御主名",
+                        "name": "Name",
                         "value": f"{name1}",
                         "inline": True
                     },
                     {
-                        "name": "朋友ID",
+                        "name": "Friend ID",
                         "value": f"{fpids1}",
                         "inline": True
                     },
                     {
-                        "name": "等级",
+                        "name": "Level",
                         "value": f"{rewards.level}",
                         "inline": True
                     },
                     {
-                        "name": "呼符", 
+                        "name": "Tickets", 
                         "value": f"{rewards.ticket}",
                         "inline": True
                     },                    
                     {
-                        "name": "圣晶石",
+                        "name": "Quartz",
                         "value": f"{rewards.stone}",
                         "inline": True
                     },
                     {
-                        "name": "圣晶片",
+                        "name": "Prism Quartz",
                         "value": f"{rewards.sqf01}",
                         "inline": True
                     },
                     {
-                        "name": "金苹果",
+                        "name": "Gold Apple",
                         "value": f"{rewards.goldenfruit}",
                         "inline": True
                     },
                     {
-                        "name": "银苹果",
+                        "name": "Silver Apple",
                         "value": f"{rewards.silverfruit}",
                         "inline": True
                     },
                     {
-                        "name": "铜苹果",
+                        "name": "Bronze Apple",
                         "value": f"{rewards.bronzefruit}",
                         "inline": True
                     },
                     {
-                        "name": "蓝苹果",
+                        "name": "Blue Apple",
                         "value": f"{rewards.bluebronzefruit}",
                         "inline": True
                     },
                     {
-                        "name": "蓝苹果树苗",
+                        "name": "Blue Apple Sapling",
                         "value": f"{rewards.bluebronzesapling}",
                         "inline": True
                     },
                     {
-                        "name": "连续登录天数",
+                        "name": "Consecutive Login Days",
                         "value": f"{login.login_days}",
                         "inline": True
                     },
                     {
-                        "name": "累计登录天数",
+                        "name": "Total Days",
                         "value": f"{login.total_days}",
                         "inline": True
                     },
                     {
-                        "name": "白方块",
+                        "name": "Pure Prism",
                         "value": f"{rewards.pureprism}",
                         "inline": True
                     },
                     {
-                        "name": "友情点",
+                        "name": "Friend Points",
                         "value": f"{login.total_fp}",
                         "inline": True
                     },
                     {
-                        "name": "今天 获得的友情点",
+                        "name": "Today's Friend Points",
                         "value": f"+{login.add_fp}",
                         "inline": True
                     },
                     {
-                        "name": "当前AP",
+                        "name": "Remaining AP",
                         "value": f"{login.remaining_ap}",
                         "inline": True
                     },
                     {
-                        "name": "圣杯",
+                        "name": "Holy Grail",
                         "value": f"{rewards.holygrail}",
                         "inline": True
                     },
@@ -155,7 +155,7 @@ def shop(item: str, quantity: str) -> None:
                 "fields": [
                     {
                         "name": f"商店",
-                        "value": f"消费 {40 * quantity}Ap 购买 {quantity}x {item}",
+                        "value": f"Consumed {40 * quantity}Ap Used {quantity}x {item}",
                         "inline": False
                     }
                 ],
