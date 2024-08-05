@@ -36,6 +36,7 @@ def get_latest_appver():
 
     return response_data['appVer']
 
+
 def main():
     if userNums == authKeyNums and userNums == secretKeyNums:
         fgourl.set_latest_assets()
