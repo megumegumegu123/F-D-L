@@ -65,7 +65,6 @@ def main():
                 instance.LTO_Gacha()
                 
 
-
             except Exception as ex:
                 logger.error(ex)
 
