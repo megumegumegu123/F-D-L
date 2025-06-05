@@ -7,9 +7,9 @@
 
 
 
-# FGO每日自动登录
+ # FGO每日自动登录
 
-<img width="33%" style="border: 1px solid black" src="https://i.imgur.com/azBO1qu.png">
+<img width="40%" style="border: 1px solid black" src="./libs/2024-10-20 204307.png">
 
 🤓这么多年来…就目前来说有那么亿点点封号风险(^_-)-☆
 
@@ -72,7 +72,7 @@ adb shell cp /storage/emulated/0/Android/data/com.aniplex.fategrandorder/files/d
 
 # 5. 填写 Github Secrets
 
-将下列 密钥类型 和 对应的值 添加到 `右上角 > settings > Secrets and variables > actions`
+创建 密钥类型，并将之前步骤获得的数值 填写到 对应的 密钥类型 中 `右上角 > settings > Secrets and variables > actions`
 <img width="75%" style="border: 1px solid black" src="https://i.imgur.com/J7jb6TX.png">
 
 需要登录多个账号时使用 英文逗号
@@ -83,12 +83,13 @@ adb shell cp /storage/emulated/0/Android/data/com.aniplex.fategrandorder/files/d
 
 | 密钥类型 | 账号密钥 样本 |
 | --- | --- |
-| GAME_AUTHKEYS | RaNdOmStRiNg1234:randomAAAAA=,RaNdOmStRiNg1235:randomAAAAA= |
-| GAME_SECRETKEYS | RaNdOmStRiNg1234:randomAAAAA=,RaNdOmStRiNg1235:randomAAAAA= |
+| GAME_AUTHKEYS | RaNdOmStRiNg1234:randomAAAAA=,RaNdOmStRiNg1235:randomBBBB= |
+| GAME_SECRETKEYS | RaNdOmStRiNg1234:randomAAAAA=,RaNdOmStRiNg1235:randomBBBB= |
 | GAME_USERIDS | 1234,1235 |
 | USER_AGENT_SECRET_2 | Dalvik/2.1.0 (Linux; U; Android 14; Pixel 5 Build/UP1A.231105.001) 建议不要照抄 |
 | DEVICE_INFO_SECRET | Google Pixel 5 / Android OS 14 / API-34 (UP1A.231105.001/10817346) 建议不要照抄 |
-| DISCORD_WEBHOOK | https://discord.com/api/webhooks/randomNumber/randomString |
+| DISCORD_WEBHOOK | https://discord.com/api/webhooks/randomNumber/randomString / 填写你自己的 Webhooks 链接 |
+| APP_CHECK_SECRET | 留空 不填写  |
 
 
 # 6. 设置执行 定时签到任务/ 定时登录 
@@ -113,10 +114,11 @@ adb shell cp /storage/emulated/0/Android/data/com.aniplex.fategrandorder/files/d
 - -------------------------------------------------------------------------------------- -
 
 # 已完成 
-- [x] 自动每日友情点召唤
+- [x] 自动每日友情召唤/友情活动限定召唤
 - [x] 自动种蓝苹果🍎
 - [x] 自动领取礼物盒
 - [x] 自动兑换达芬奇商店 每月&限时活动 呼符
+- [x] 自动兑换 素材交換券
 - -------------------------------------------------------------------------------------- -
 # 未来计划 （咕咕咕🤣）
 - [ ] 待定…

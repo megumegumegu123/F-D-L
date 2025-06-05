@@ -12,6 +12,7 @@ authKeys = os.environ['authKeys'].split(',')
 secretKeys = os.environ['secretKeys'].split(',')
 webhook_discord_url = os.environ['webhookDiscord']
 device_info = os.environ.get('DEVICE_INFO_SECRET')
+appCheck = os.environ.get('APP_CHECK_SECRET')
 user_agent_2 = os.environ.get('USER_AGENT_SECRET_2')
 fate_region = 'JP'
 
@@ -43,15 +44,16 @@ def main():
         for i in range(userNums):
             try:
                 instance = user.user(userIds[i], authKeys[i], secretKeys[i])
-                time.sleep(3)
-                logger.info(f"\n ======================================== \n [+] 登录账号 \n ======================================== " )
-
                 time.sleep(1)
-                instance.topLogin_s()
+                logger.info(f"\n {'=' * 40} \n [+] 登录账号 \n {'=' * 40} " )
+                instance.topLogin()
                 time.sleep(2)
                 instance.topHome()
-                time.sleep(2)
+                time.sleep(0.5)
                 instance.lq001()
+                time.sleep(0.5)
+                instance.Present()
+                time.sleep(0.5)
                 instance.lq002()
                 time.sleep(2)
                 instance.buyBlueApple()
@@ -59,6 +61,9 @@ def main():
                 instance.lq003()
                 time.sleep(1)
                 instance.drawFP()
+                time.sleep(1)
+                instance.LTO_Gacha()
+                
 
 
             except Exception as ex:
