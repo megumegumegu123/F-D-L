@@ -64,10 +64,8 @@ def main():
                 time.sleep(1)
                 instance.LTO_Gacha()
                 
-
             except Exception as ex:
                 logger.error(ex)
 
 if __name__ == "__main__":
     main()
-
