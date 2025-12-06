@@ -65,6 +65,7 @@ def main():
                 instance.LTO_Gacha()
                 time.sleep(1)
                 if "--Free_Gacha" in sys.argv:
+                    logger.info(f"\n {'=' * 40} \n [+] 每日免费单抽 \n {'=' * 40} " )
                     instance.Free_Gacha()
                 
 
