@@ -278,7 +278,6 @@ def LTO_Gacha(servants) -> None:
 
 def Free_Gacha(servants) -> None:
     endpoint = main.webhook_discord_url
-
     message_servant = ""
     
     if (len(servants) > 0):
