@@ -522,7 +522,7 @@ xCGlz9vV3+AAQ31C2phoyd/QhvpL85p39n6Ibg==
         self.builder_.AddParameter('shopIdIndex', '1')
         self.builder_.AddParameter('gachaSubId', str(gachaSubId))
                 
-        main.logger.info(f"\n {'=' * 40} \n [+] 每日免费单抽 GachaId：{gachaId} SubId：{gachaSubId} \n {'=' * 40} ")
+        main.logger.info(f"\n {'=' * 40} \n [+] GachaId：{gachaId} SubId：{gachaSubId} \n {'=' * 40} ")
         data = self.Post(f'{fgourl.server_addr_}/gacha/draw?_userId={self.user_id_}')
                 
         responses = data['response']
