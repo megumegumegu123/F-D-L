@@ -639,16 +639,8 @@ xCGlz9vV3+AAQ31C2phoyd/QhvpL85p39n6Ibg==
                                 info['objectId']
                             )
                         )
-
-                if "eventMissionAnnounce" in resSuccess:
-                    for mission in resSuccess["eventMissionAnnounce"]:
-                        missionArray.append(
-                            gacha.EventMission(
-                                mission['message'], mission['progressFrom'], mission['progressTo'], mission['condition']
-                            )
-                        )
-
-            webhook.drawFP(servantArray, missionArray)
+                        
+            webhook.LTO_Gacha(servantArray)
 
 
 
