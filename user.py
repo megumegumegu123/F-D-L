@@ -553,8 +553,8 @@ xCGlz9vV3+AAQ31C2phoyd/QhvpL85p39n6Ibg==
     def drawFP(self):
         #SubID判定有点不准了.偶尔错误抽卡失败...等哪天闲暇再修
         gachaSubId = GetGachaSubIdFP()
+        main.logger.info(f"\n {'=' * 40} \n [+] 友情卡池ID : {gachaSubId}\n {'=' * 40} " )
         
-
         if gachaSubId is None:
            gachaSubId = 0
             
@@ -564,10 +564,9 @@ xCGlz9vV3+AAQ31C2phoyd/QhvpL85p39n6Ibg==
         self.builder_.AddParameter('num', '10')
         self.builder_.AddParameter('ticketItemId', '0')
         self.builder_.AddParameter('shopIdIndex', '1')
-        #self.builder_.AddParameter('gachaSubId', gachaSubId)
-        self.builder_.AddParameter('gachaSubId', '473')
+        self.builder_.AddParameter('gachaSubId', gachaSubId)
+        #self.builder_.AddParameter('gachaSubId', '485')
 
-        main.logger.info(f"\n {'=' * 40} \n [+] 友情卡池ID : {gachaSubId}\n {'=' * 40} " )
         data = self.Post(f'{fgourl.server_addr_}/gacha/draw?_userId={self.user_id_}')
         responses = data['response']
 
@@ -602,7 +601,7 @@ xCGlz9vV3+AAQ31C2phoyd/QhvpL85p39n6Ibg==
 
     
     def LTO_drawFP(self):
-        #期間限定『「第2部 終章」開幕！ サーヴァント全騎ピックアップ召喚』にあわせて、過去に開催した6種類のフレンドポイント召喚を再び開催！
+        #『「春の新米マスター応援キャンペーン2026！」ピックアップ召喚』期間 2026年3月30日(月) 18:00～4月13日(月) 12:59まで
         
         def setup_parameters(gachaId, gachaSubId):
             self.builder_.AddParameter('storyAdjustIds', '[]')
@@ -613,8 +612,8 @@ xCGlz9vV3+AAQ31C2phoyd/QhvpL85p39n6Ibg==
             self.builder_.AddParameter('shopIdIndex', '1')
             self.builder_.AddParameter('gachaSubId', gachaSubId)
 
-        gachaIds = ['14', '15', '16', '17', '18', '19']
-        gachaSubIds = ['4', '4', '2', '2', '1', '1']
+        gachaIds = ['20', '21', '22', '23', '24', '25']
+        gachaSubIds = ['8', '8', '4', '4', '2', '2']
         for gachaId, gachaSubId in zip(gachaIds, gachaSubIds):
             time.sleep(2)
             setup_parameters(gachaId, gachaSubId)
@@ -705,7 +704,7 @@ xCGlz9vV3+AAQ31C2phoyd/QhvpL85p39n6Ibg==
     def lq003(self):
         # https://game.fate-go.jp/shop/purchase
         
-        url = 'https://git.atlasacademy.io/atlasacademy/fgo-game-data/raw/branch/JP/master/mstShop.json'
+        url = 'https://raw.githubusercontent.com/DNNDHH/GSubList/Main/Shopdate.json'
         response = requests.get(url)
         fdata = response.json()
         max_base_shop_id = None
