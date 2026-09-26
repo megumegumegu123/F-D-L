@@ -69,7 +69,6 @@ def main():
                 #instance.LTO_Gacha()
                 #instance.LTO_drawFP()
 
-            
                 
             except Exception as ex:
                 logger.error(ex)
